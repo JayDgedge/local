@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #modal {
+            display: none;
+            position:fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 25px;
+            background-color: #FFF;
+            border: 2px solid #EEE;
+            z-index: 1001;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+        /*O background do tal modal, quando esta aberto*/
+        #modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:rgba(119, 99, 99, 0.5);
+
+            /*VAMOS TRABALHAR*/
+         
+        }
+        .button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #3b3633;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+        </ul>
+    </nav>
+    
+    <main>
+        <article>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit asperiores dolore minus? Doloribus eveniet modi nisi saepe id. Laudantium ipsam deserunt aspernatur deleniti! Est aut fugit perferendis quas iste similique.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla velit veniam, beatae facere accusantium amet adipisci, harum perferendis sint ea odit illo quam, iusto magnam aut ratione deleniti maiores nisi.
+                Autem neque a labore asperiores, mollitia consectetur culpa eaque omnis repudiandae nostrum maiores enim nesciunt temporibus est illum, nobis odio dignissimos ea doloremque error ipsum iure magni. Quaerat, deserunt officiis.
+                Iure vel sed alias veritatis, quidem neque eius laudantium, repellat, fuga sapiente sunt repellendus! Saepe sit illo ipsam iste minus? Iure pariatur, cumque animi nisi distinctio perferendis. Natus, ex aut!
+                Nesciunt iste sequi corporis repellat dolorem hic qui. Eligendi maxime, repellat, veritatis nihil ullam itaque illo quaerat neque consequuntur laboriosam nulla earum eveniet cupiditate quos assumenda illum minima rem odit!
+                Et nulla sunt nisi sit rem, minima impedit, ducimus maiores aut molestias accusantium eius numquam qui quasi perspiciatis similique, iure ratione quam nam animi voluptatum odio. Magni a molestias neque?
+                Architecto quam quae itaque hic ea dolore asperiores nihil explicabo repellat aliquam, modi at labore dolorum atque iusto soluta debitis impedit laborum pariatur quaerat reprehenderit aspernatur quisquam minus? Minima, ducimus.
+                Minus in magni sed. Nisi non magni, vel, harum earum fugit blanditiis deserunt aut cupiditate ullam inventore deleniti nulla quae quam iste assumenda eum laborum laboriosam, perspiciatis similique vero corporis?
+                Aliquid esse quo sapiente. Tenetur minima aut voluptatem officiis molestiae voluptates ratione qui facere libero ipsa harum facilis sint enim distinctio maiores necessitatibus, eveniet quisquam accusamus ducimus, debitis id sunt.
+                Deserunt iste quo ut, qui error quos mollitia libero laudantium doloremque totam debitis necessitatibus, accusantium adipisci optio incidunt harum maiores? Veniam molestias dicta dolore id deserunt voluptate veritatis laboriosam non!
+                Aut mollitia quod sunt vero nisi debitis totam, provident beatae consectetur delectus quam. Maxime quae aliquid hic laboriosam sint corrupti ex exercitationem vitae quis nostrum incidunt, adipisci esse possimus inventore?   
+            </p>
+            
+            
+        </article>
+    </main>
+
+    <aside>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero iste illo accusantium reprehenderit impedit in labore eius quidem numquam consectetur magni nihil corporis veritatis assumenda necessitatibus, rem rerum laudantium eum!</p>
+    </aside>
+
+    <button class="button" onclick="mostrarModal()">Mostrar Modal</button>
+    <div id="modal-overlay"></div>
+    <div id="modal">
+        <p>Mensagem de confirmação</p>
+        <button class="button" onclick="desmostarModal()">Fechar Modal</button>
+    </div>
+
+    <script>
+        function mostrarModal() {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modal-overlay').style.display = 'block';
+        }
+
+        function desmostarModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('modal-overlay').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
